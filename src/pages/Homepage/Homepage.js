@@ -14,7 +14,7 @@ export default function Homepage(){
         mb={4}
       >
         <Navbar />
-        <Container maxWidth="xl">
+        <Container sx ={{maxWidth : "90%"}}>
           <Hero />
 
         </Container>

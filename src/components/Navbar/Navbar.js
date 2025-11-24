@@ -21,7 +21,7 @@ export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header>
+    <header >
       <Box p={1} bgcolor="primary.main">
         <Typography fontSize={14} textAlign="center" color="#fff">
           The health and well-being of our patients and their health care team
@@ -29,8 +29,7 @@ export default function NavBar() {
           cleanliness.
         </Typography>
       </Box>
-
-      <Container maxWidth="xl">
+      <Container sx={{ maxWidth: "92%" }}>
         <Stack
           direction="row"
           spacing={2}
@@ -58,7 +57,7 @@ export default function NavBar() {
             <Link>Software for Provider</Link>
             <Link>Facilities</Link>
             <Link to="/my-bookings">
-              <Button variant="contained" disableElevation>
+              <Button variant="contained" sx={{ backgroundColor: "#2AA8FF", borderRadius: "8px" }} disableElevation>
                 My Bookings
               </Button>
             </Link>
