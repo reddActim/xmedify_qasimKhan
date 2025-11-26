@@ -5,7 +5,7 @@ import img from "../../assets/heroImg.png"
 export default function Hero() {
     return (
         <>
-            <Stack direction={{ xs: 'column', md: "row" }} alignItems="center" sx={{mt: "1em"}}>
+            <Stack direction={{ xs: 'column', md: "row" }} alignItems="center" sx={{mt: "1em",  paddingRight: "1.8rem"}}>
                 <Box>
                     <Typography sx={{
                         fontFamily: "Poppins",

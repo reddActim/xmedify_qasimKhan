@@ -1,0 +1,14 @@
+.swiperWrapper{
+padding-bottom: 2rem;
+}
+.slideImage{
+    width: 100%;
+height: auto;
+min-height:180px;
+max-height: 180px;
+
+border-radius: 20px;
+angle: 0 deg;
+opacity: 1;
+object-fit: fill;
+}
