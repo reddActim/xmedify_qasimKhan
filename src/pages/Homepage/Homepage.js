@@ -3,6 +3,7 @@ import Navbar from "../../components/Navbar/Navbar"
 import { Box, Container, Stack, } from "@mui/material";
 import Hero from "../../components/Hero/Hero";
 import Offers from '../../components/Offers'
+import Specialization from "../../components/Specialization";
 
 export default function Homepage() {
   return (
@@ -22,6 +23,7 @@ export default function Homepage() {
           </Container>
         </Box>
         <Offers />
+        <Specialization />
       </Box>
     </>
   )
