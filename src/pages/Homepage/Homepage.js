@@ -6,10 +6,15 @@ import Offers from '../../components/Offers'
 import Specialization from "../../components/Specialization";
 import Specialist from "../../components/Specialist/Specialist";
 import PatientCare from "../../components/PatientCare/PatientCare";
+import Blogs from "../../components/Sections/Blogs/Blogs";
+import { CssBaseline } from "@mui/material";
+
 
 export default function Homepage() {
   return (
     <>
+      <CssBaseline />
+
         <Box
           sx={{
             background:
@@ -31,6 +36,8 @@ export default function Homepage() {
         <Specialist />
 
         <PatientCare />
+
+        <Blogs />
     </>
   )
 }
