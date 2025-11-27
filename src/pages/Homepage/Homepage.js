@@ -8,6 +8,7 @@ import Specialist from "../../components/Specialist/Specialist";
 import PatientCare from "../../components/PatientCare/PatientCare";
 import Blogs from "../../components/Sections/Blogs/Blogs";
 import { CssBaseline } from "@mui/material";
+import OurFamilies from "../../components/Sections/OurFamilies/OurFamilies";
 
 
 export default function Homepage() {
@@ -38,6 +39,8 @@ export default function Homepage() {
         <PatientCare />
 
         <Blogs />
+
+        <OurFamilies />
     </>
   )
 }
