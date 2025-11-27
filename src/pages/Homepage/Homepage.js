@@ -9,6 +9,7 @@ import PatientCare from "../../components/PatientCare/PatientCare";
 import Blogs from "../../components/Sections/Blogs/Blogs";
 import { CssBaseline } from "@mui/material";
 import OurFamilies from "../../components/Sections/OurFamilies/OurFamilies";
+import FAQs from "../../components/Sections/FAQs/FAQs";
 
 
 export default function Homepage() {
@@ -41,6 +42,8 @@ export default function Homepage() {
         <Blogs />
 
         <OurFamilies />
+
+        <FAQs />
     </>
   )
 }
