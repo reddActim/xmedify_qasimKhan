@@ -4,10 +4,9 @@ import tick from '../../assets/tick-blue.png'
 
 export default function PatientCare() {
   return (
-    <Box py={6} sx={{ background: "linear-gradient(#E7F0FF, #E8F1FF)" }}>
-      <Container>
+    <Box py={6} px={6} sx={{ background: "linear-gradient(#E7F0FF, #E8F1FF)" }}>
         <Grid container spacing={6} alignItems="center">
-          <Grid item xs={12} md={6}>
+          <Grid item xs={6} md={6} >
             <Box
               component="img"
               src={banner}
@@ -15,8 +14,7 @@ export default function PatientCare() {
             />
           </Grid>
 
-          <Grid item xs={12} md={6}>
-            <Box>
+          <Grid item xs={6} md={6} sx={{ maxWidth: "45%"}}>
               <Typography fontWeight={600} color="#2AA7FF">
                 HELPING PATIENTS FROM AROUND THE GLOBE!!
               </Typography>
@@ -24,8 +22,7 @@ export default function PatientCare() {
                 Patient <Box component="span" color="primary.main">Caring</Box>
               </Typography>
               <Typography color="#77829D" lineHeight={1.8} mb={3}>
-                Our goal is to deliver quality of care in a courteous, respectful, and compassionate manner...
-              </Typography>
+Our goal is to deliver quality of care in a courteous, respectful, and compassionate manner. We hope you will allow us to care for you and strive to be the first and best choice for healthcare.              </Typography>
 
               <List sx={{ fontSize: { xs: 12, md: 18 } }}>
                 {["Stay Updated About Your Health", "Check Your Results Online", "Manage Your Appointments"].map((text, i) => (
@@ -44,10 +41,8 @@ export default function PatientCare() {
                   </ListItem>
                 ))}
               </List>
-            </Box>
           </Grid>
         </Grid>
-      </Container>
     </Box>
   );
 }
