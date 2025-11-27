@@ -4,7 +4,7 @@ import tick from '../../assets/tick-blue.png'
 
 export default function PatientCare() {
   return (
-    <Box py={6} px={6} sx={{ background: "linear-gradient(#E7F0FF, #E8F1FF)" }}>
+    <Box py={6} px={10} sx={{ background: "linear-gradient(81deg, #E7F0FF 9.01%, rgba(232, 241, 255, 0.47) 89.11%)" }}>
         <Grid container spacing={6} alignItems="center">
           <Grid item xs={6} md={6} >
             <Box
@@ -19,7 +19,7 @@ export default function PatientCare() {
                 HELPING PATIENTS FROM AROUND THE GLOBE!!
               </Typography>
               <Typography variant="h2" mb={1}>
-                Patient <Box component="span" color="primary.main">Caring</Box>
+                Patient <Box component="span" color="#2AA7FF">Caring</Box>
               </Typography>
               <Typography color="#77829D" lineHeight={1.8} mb={3}>
 Our goal is to deliver quality of care in a courteous, respectful, and compassionate manner. We hope you will allow us to care for you and strive to be the first and best choice for healthcare.              </Typography>

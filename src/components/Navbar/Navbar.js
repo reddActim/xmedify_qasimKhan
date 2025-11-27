@@ -22,14 +22,15 @@ export default function NavBar() {
 
   return (
     <header >
-      <Box p={1} bgcolor="primary.main" sx={{backgroundColor: "#2AA7FF", padding: "0.75rem"}}>
-        <Typography fontSize={14} textAlign="center" color="#fff" sx ={{fontFamily: "Poppins",
-fontWeight: "400",
-fontStyle: "Regular",
-fontSize: "14px",
-lineHeight: "100%",
-letterSpacing: "0%",
-}}>
+      <Box p={1} sx={{ backgroundColor: "#2AA7FF", padding: "0.75rem" }}>
+        <Typography fontSize={14} textAlign="center" color="#fff" sx={{
+          fontFamily: "Poppins",
+          fontWeight: "400",
+          fontStyle: "Regular",
+          fontSize: "14px",
+          lineHeight: "100%",
+          letterSpacing: "0%",
+        }}>
           The health and well-being of our patients and their health care team
           will always be our priority, so we follow the best practices for
           cleanliness.
