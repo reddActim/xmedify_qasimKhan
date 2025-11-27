@@ -4,11 +4,12 @@ import { Box, Container, Stack, } from "@mui/material";
 import Hero from "../../components/Hero/Hero";
 import Offers from '../../components/Offers'
 import Specialization from "../../components/Specialization";
+import Specialist from "../../components/Specialist/Specialist";
+import PatientCare from "../../components/PatientCare/PatientCare";
 
 export default function Homepage() {
   return (
     <>
-      <Box>
         <Box
           sx={{
             background:
@@ -17,14 +18,19 @@ export default function Homepage() {
           }}
         >
           <Navbar />
-          <Container sx={{ maxWidth: "90%" }}>
+          <Container maxWidth={false} sx={{ width: "90%" }}>
             <Hero />
 
           </Container>
         </Box>
+
         <Offers />
+
         <Specialization />
-      </Box>
+
+        <Specialist />
+
+        <PatientCare />
     </>
   )
 }
