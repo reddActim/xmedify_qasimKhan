@@ -11,6 +11,7 @@ import { CssBaseline } from "@mui/material";
 import OurFamilies from "../../components/Sections/OurFamilies/OurFamilies";
 import FAQs from "../../components/Sections/FAQs/FAQs";
 import Search from "../../components/Search/Search";
+import HeroServices from "../../components/heroServices/HeroServices";
 
 
 export default function Homepage() {
@@ -38,6 +39,7 @@ export default function Homepage() {
             boxShadow="0 0 12px rgba(0,0,0,0.1)"
                  >
             <Search />
+            <HeroServices />
           </Stack>
         </Container>
       </Box>
