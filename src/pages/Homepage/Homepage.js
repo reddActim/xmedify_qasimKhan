@@ -10,6 +10,7 @@ import Blogs from "../../components/Sections/Blogs/Blogs";
 import { CssBaseline } from "@mui/material";
 import OurFamilies from "../../components/Sections/OurFamilies/OurFamilies";
 import FAQs from "../../components/Sections/FAQs/FAQs";
+import Search from "../../components/Search/Search";
 
 
 export default function Homepage() {
@@ -17,33 +18,43 @@ export default function Homepage() {
     <>
       <CssBaseline />
 
-        <Box
-          sx={{
-            background:
-              "linear-gradient(#E7F0FF , rgba(232, 241, 255, 0.47) 90%, #fff 10%)",
-            paddingBottom: "30vh"
-          }}
-        >
-          <Navbar />
-          <Container maxWidth={false} sx={{ width: "90%" }}>
-            <Hero />
+      <Box
+        sx={{
+          background:
+            "linear-gradient(#E7F0FF , rgba(232, 241, 255, 0.47) 90%, #fff 10%)",
+        }}
+      >
+        <Navbar />
+        <Container maxWidth={false} sx={{ width: "90%", }}>
+          <Hero />
+          <Stack 
+                      p={{ xs: 2.5, md: 8 }}
+            mt={{ xs: -2, md: 0, lg: -6, xl: -10 }} 
+                      position="relative"
+            zIndex={99}
+            bgcolor="#fff"
+            borderRadius="15px"
+            spacing={10}
+            boxShadow="0 0 12px rgba(0,0,0,0.1)"
+                 >
+            <Search />
+          </Stack>
+        </Container>
+      </Box>
 
-          </Container>
-        </Box>
+      <Offers />
 
-        <Offers />
+      <Specialization />
 
-        <Specialization />
+      <Specialist />
 
-        <Specialist />
+      <PatientCare />
 
-        <PatientCare />
+      <Blogs />
 
-        <Blogs />
+      <OurFamilies />
 
-        <OurFamilies />
-
-        <FAQs />
+      <FAQs />
     </>
   )
 }

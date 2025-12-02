@@ -5,9 +5,10 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Homepage from './pages/Homepage/Homepage';
+import SearchPage from './pages/SearchPage/SearchPage';
 import { createTheme, ThemeProvider } from "@mui/material";
 
-//Theme object created using createTheme to override the CSS styles of MUI library
+
 export const theme = createTheme({
   typography: {
     fontFamily: "Poppins , sans-serif",
@@ -65,9 +66,9 @@ export const theme = createTheme({
           borderRadius: "8px",
           color: "#ABB6C7",
           "& .MuiOutlinedInput-notchedOutline, &:hover .MuiOutlinedInput-notchedOutline, & .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
-            {
-              borderColor: "#F0F0F0",
-            },
+          {
+            borderColor: "#F0F0F0",
+          },
         },
       },
     },
@@ -78,9 +79,9 @@ export const theme = createTheme({
           borderRadius: "8px",
           color: "#ABB6C7",
           "& .MuiOutlinedInput-notchedOutline, &:hover .MuiOutlinedInput-notchedOutline, & .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
-            {
-              borderColor: "#F0F0F0",
-            },
+          {
+            borderColor: "#F0F0F0",
+          },
         },
       },
     },
@@ -117,12 +118,16 @@ theme.typography.h3 = {
 
 const router = createBrowserRouter([
   {
-    path : "/",
-    element : <App />,
-    children : [
+    path: "/",
+    element: <App />,
+    children: [
       {
-        path : "/",
-        element : <Homepage />
+        path: "search",
+        element: <SearchPage />,
+      },  
+      {
+        path: "/",
+        element: <Homepage />
       }
     ]
   }

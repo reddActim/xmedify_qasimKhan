@@ -1,12 +1,17 @@
 import Homepage from './pages/Homepage/Homepage';
+import { Outlet } from "react-router-dom";
+import { CssBaseline } from "@mui/material";
+
+
 import './App.css';
 
 
 function App() {
   return (
-    <>
-      <Homepage />
-    </>
+    <div>
+      <CssBaseline />
+      <Outlet />
+    </div>
   );
 }
 

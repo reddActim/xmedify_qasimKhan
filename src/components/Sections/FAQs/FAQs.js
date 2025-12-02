@@ -2,8 +2,6 @@ import { Box, Container, Grid, Typography } from "@mui/material";
 import faqBanner from '../../../assets/faqs-banner.jpg'
 import CustomizedAccordions from "../../Accordion/Accordion";
 
-export default function FAQs() {
-
     const faqs = [
         {
             question: 'Why choose our medical for your family?',
@@ -22,6 +20,9 @@ export default function FAQs() {
             answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.'
         }
     ]
+
+
+export default function FAQs() {
 
     return (
         <Box py={4}>
