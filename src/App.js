@@ -4,6 +4,8 @@ import { CssBaseline } from "@mui/material";
 
 
 import './App.css';
+import DownloadApp from './components/Sections/DownloadApp/DownloadApp';
+import Footer from './components/Sections/Footer/Footer';
 
 
 function App() {
@@ -11,6 +13,8 @@ function App() {
     <div>
       <CssBaseline />
       <Outlet />
+      <DownloadApp />
+      <Footer />
     </div>
   );
 }

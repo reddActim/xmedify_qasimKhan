@@ -7,8 +7,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Homepage from './pages/Homepage/Homepage';
 import SearchPage from './pages/SearchPage/SearchPage';
 import { createTheme, ThemeProvider } from "@mui/material";
+import MyBookings from './pages/myBookings/MyBookings';
 
-
+//used theme for consistant ui
 export const theme = createTheme({
   typography: {
     fontFamily: "Poppins , sans-serif",
@@ -125,9 +126,14 @@ const router = createBrowserRouter([
         path: "search",
         element: <SearchPage />,
       },  
+
       {
         path: "/",
         element: <Homepage />
+      },
+      {
+        path: "/my-bookings",
+        element: <MyBookings />
       }
     ]
   }
