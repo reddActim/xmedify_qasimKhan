@@ -6,6 +6,8 @@ import HospitalCard from "../../components/HospitalCard/HospitalCard";
 import icon from '../../assets/tickIcon.png';
 import banner from '../../assets/advBanner.png';
 import { useSearchParams } from "react-router-dom";
+import AutohideSnackbar from "../../components/BookingModal/AutohideSnackbar";
+import BookingModal from "../../components/BookingModal/BookingModal";
 
 
 // const hospitals = [
@@ -85,6 +87,11 @@ export default function SearchPage() {
     const [city, setCity] = useState(searchParams.get("city"));
     const [hospitals, setHospitals] = useState([]);
 
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [bookingDetails, setBookingDetails] = useState({});
+    const [showBookingSuccess, setShowBookingSuccess] = useState(false);
+
+    console.log("bookingDetails: ", bookingDetails);
     //set city and state onchange of url
     useEffect(() => {
         setState(searchParams.get("state"));
@@ -101,23 +108,30 @@ export default function SearchPage() {
                     .then(response => {
                         if (!response.ok) {
                             throw new Error(`HTTP error! Status: ${response.status}`);
-                        } 
+                        }
                         return response.json()
                     })
-                    .then(hospitals =>{
+                    .then(hospitals => {
                         setHospitals(hospitals)
+                        setIsLoading(false);
+
                         console.log(hospitals);
                     }
                     )
             }
         } catch (error) {
             console.log(error);
-        } finally{
             setIsLoading(false);
+
         }
     }, [state, city]);
 
-    console.log(searchParams.get("state"))
+    const handleBookingModal = (details) => {
+        setBookingDetails(details);
+        setIsModalOpen(true);
+    };
+
+    // console.log(searchParams.get("state"))
     return (
         <>
             <Navbar />
@@ -189,7 +203,7 @@ export default function SearchPage() {
                                         key={hospital["Hospital Name"]}
                                         details={hospital}
                                         availableSlots={availableSlots}
-                                    // handleBooking={handleBookingModal}
+                                        handleBooking={handleBookingModal}
                                     />
                                 ))}
 
@@ -210,7 +224,18 @@ export default function SearchPage() {
                     </Stack>
 
                 </Container>
+                <BookingModal
+                    open={isModalOpen}
+                    setOpen={setIsModalOpen}
+                    bookingDetails={bookingDetails}
+                    showSuccessMessage={setShowBookingSuccess}
+                />
 
+                <AutohideSnackbar
+                    open={showBookingSuccess}
+                    setOpen={setShowBookingSuccess}
+                    message="Booking Successful"
+                />
 
             </Box>
         </>

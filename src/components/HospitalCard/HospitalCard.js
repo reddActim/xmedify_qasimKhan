@@ -3,15 +3,18 @@ import { format } from "date-fns";
 import HospitalIcon from '../../assets/hospitalIcon.png';
 import thumb from '../../assets/thumbs.png'
 import {useState} from 'react';
+import Calender from "../Calender/Calender";
 
 export default function HospitalCard({ 
     details, 
     availableSlots,
+    handleBooking,
     booking = false,
 }) {
   const [showCalendar, setShowCalendar] = useState(false);
 
     return (
+        <Box sx={{ borderRadius: 2, bgcolor: "#fff", p: { xs: 2, md: 4 } }}>
         <Stack
             direction={{ xs: "column", md: "row" }}
             spacing={{ xs: 1, md: 4 }}
@@ -141,5 +144,14 @@ export default function HospitalCard({
             </Stack>
 
         </Stack>
+
+        {showCalendar && (
+        <Calender
+          details={details}
+          availableSlots={availableSlots}
+          handleBooking={handleBooking}
+        />
+      )}
+        </Box>
     )
 } 
