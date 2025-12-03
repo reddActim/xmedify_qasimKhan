@@ -6,6 +6,7 @@ import {useState} from 'react';
 
 export default function HospitalCard({ 
     details, 
+    availableSlots,
     booking = false,
 }) {
   const [showCalendar, setShowCalendar] = useState(false);
@@ -15,11 +16,11 @@ export default function HospitalCard({
             direction={{ xs: "column", md: "row" }}
             spacing={{ xs: 1, md: 4 }}
             flexWrap={"wrap"}
-        >
+            sx={{backgroundColor:"white", padding:"1.5rem", }}
+>
             <Box
-                component="img" src={HospitalIcon} width={{ xs: 64, md: 130 }} height="auto"
+                component="img" src={HospitalIcon} width={{ xs: 64, md: 130 }} height={{ xs: 64, md: 130 }}
             />
-
             <Box flex={1}>
                 <Typography
                     component="h3"
