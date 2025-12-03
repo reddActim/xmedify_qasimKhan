@@ -7,7 +7,7 @@ import icon5 from '../../assets/card_service (4).png';
 
 export default function HeroServices() {
     return (
-        <Stack gap={4} sx={{alignItems:"center"}}>
+        <Stack gap={4} sx={{alignItems:"center"}} >
             <Typography
                 color='#102851'
                 variant='h5'
@@ -22,12 +22,13 @@ export default function HeroServices() {
             </Typography>
             <Stack
             direction="row"
+            sx={{overflow:"hidden"}}
             gap={2}>
-                <Box component="img" src={icon1} sx={{width: "203px", height:"150px"}} />
-                <Box component="img" src={icon2} sx={{width: "203px", height:"150px"}} />
-                <Box component="img" src={icon3} sx={{width: "203px", height:"150px"}} />
-                <Box component="img" src={icon4} sx={{width: "203px", height:"150px"}} />
-                <Box component="img" src={icon5} sx={{width: "203px", height:"150px"}} />
+                <Box component="img" src={icon1} sx={{width: "18%", height:"20%"}} />
+                <Box component="img" src={icon2} sx={{width: "18%", height:"20%"}} />
+                <Box component="img" src={icon3} sx={{width: "18%", height:"20%"}} />
+                <Box component="img" src={icon4} sx={{width: "18%", height:"20%"}} />
+                <Box component="img" src={icon5} sx={{width: "18%", height:"20%"}} />
             </Stack>
         </Stack>
     )
